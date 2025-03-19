@@ -34,46 +34,40 @@
         padding-top: 50px;
       }
 
-      .sim{
-         
-          height: 40px;
-          width: 60px;
-          background-color: red;
-          border: white;
-          border-radius: 10px;
-          color: white;
-          margin-left: 50px;
-      }
-
-      .nao {
-         position: absolute;
-          height: 40px;
+      .sim {
+        height: 40px;
         width: 60px;
         background-color: red;
         border: white;
         border-radius: 10px;
         color: white;
-        margin-left: 10px;
-
+        margin-right: 50px;
       }
 
-
+      .nao {
+        position: absolute;
+        height: 40px;
+        width: 60px;
+        background-color: red;
+        border: white;
+        border-radius: 10px;
+        color: white;
+        margin-left: 1w0px;
+      }
     </style>
   </head>
   <body>
     <div class="painel">
+
       <h1></h1>
 
       <button class="sim">Sim</button>
       <button onmouseover="fuja()" class="nao">Nao</button>
-    
-    
-   
     </div>
 
-     <script>
-      function fuja(){
-        var botaoNao = document.getElementById("nao")
+    <script>
+      function fuja() {
+        var botaoNao = document.getElementById("nao");
 
         var largura = window.innerWidth;
         var altura = window.innerHeight;
@@ -81,16 +75,12 @@
         var maxX = largura - botaoNao.offsetWidth;
         var maxY = atura - botaoNao.offsetHeight;
 
-        var aleatorioX = Math.floor(Math.random()* maxX);
-        var aleatorioY = Math.floor(Math.random()* maxY);
-        
-        botaoNao.style.left = aleatorioX +"px"
-         botaoNao.style.top = aleatorioY +"px"
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
 
-
+        botaoNao.style.left=aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
       }
-     </script>
-    
-  
+    </script>
   </body>
 </html>
